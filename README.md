@@ -1,4 +1,6 @@
-# Mini Application Workflow Tracker(Andrew Ambuka)
+# Mini Application Workflow Tracker
+### Name: `Andrew Ambuka`
+### Email: `andrewambuka9@gmail.com`
 
 A production-style workflow management system built with Django Ninja (backend) and React + TypeScript (frontend). The system enforces a strict, state-driven application review lifecycle with backend-controlled transitions.
 
