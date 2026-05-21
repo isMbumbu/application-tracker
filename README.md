@@ -26,6 +26,21 @@ Draft -> Submitted -> Under Review -> Need More Information / Approved / Rejecte
 - Frontend: React, TypeScript, Vite, Fetch API
 - Tooling: Docker, Docker Compose
 
+## Docker Setup(Important add on)
+
+Run both Frontend and Backend:
+
+```bash
+docker compose up --build
+```
+This way docker handles all installations and packages needed to run the application
+
+Then open:
+
+```bash
+http://localhost:5173
+```
+
 ## Environment And Database
 
 Backend environment variables live in:
@@ -115,7 +130,7 @@ Django admin:
 http://localhost:8000/admin/
 ```
 
-If you use the included local `.env`, the development admin credentials are:
+If you use the included local `.env.example`, the development admin credentials are:
 
 ```bash
 username: admin
@@ -156,19 +171,6 @@ Set a custom API URL if needed:
 VITE_API_URL=http://localhost:8000/api npm run dev
 ```
 
-## Docker Setup
-
-Run both services:
-
-```bash
-docker compose up --build
-```
-
-Then open:
-
-```bash
-http://localhost:5173
-```
 
 The backend container runs migrations before starting the development server.
 It also creates the configured initial admin user.
