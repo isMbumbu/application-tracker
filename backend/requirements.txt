@@ -1,2 +1,2 @@
-django
-django-ninja
+Django>=4.2,<5.0
+django-ninja>=1.0,<2.0

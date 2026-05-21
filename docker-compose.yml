@@ -1,7 +1,34 @@
 services:
   backend:
     build: ./backend
+    command: >
+      sh -c "python manage.py migrate &&
+      python manage.py ensure_admin_user &&
+      python manage.py runserver 0.0.0.0:8000"
+    environment:
+      ALLOWED_HOSTS: "localhost,127.0.0.1,0.0.0.0,backend"
+      CORS_ALLOWED_ORIGINS: "http://localhost:5173,http://127.0.0.1:5173"
+      DEBUG: "True"
+      DJANGO_SUPERUSER_EMAIL: "admin@example.com"
+      DJANGO_SUPERUSER_PASSWORD: "admin12345"
+      DJANGO_SUPERUSER_USERNAME: "admin"
+      SECRET_KEY: django-insecure-local-docker-key
     ports:
       - "8000:8000"
     volumes:
       - ./backend:/app
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    environment:
+      VITE_API_URL: "http://localhost:8000/api"
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./frontend:/app
+      - frontend-node-modules:/app/node_modules
+
+volumes:
+  frontend-node-modules:
