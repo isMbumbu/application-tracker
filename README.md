@@ -29,6 +29,7 @@ Draft -> Submitted -> Under Review -> Need More Information / Approved / Rejecte
 ## Docker Setup(Important add on)
 
 Run both Frontend and Backend:
+After cloning and setting up the `.env` by copying the `.env.examples` of  both folders in the repo(Both folders have .envs)
 
 ```bash
 docker compose up --build
