@@ -29,6 +29,14 @@ Draft -> Submitted -> Under Review -> (Approved | Rejected | Need More Informati
 * **Django ORM (Persistence Layer)**
 * **SQLite (Dev) / PostgreSQL (Extensible)**
 
+### Screenshots
+## backend-docs
+<img width="1434" height="852" alt="Screenshot 2026-05-22 at 12 51 47" src="https://github.com/user-attachments/assets/32e47211-3552-42f8-b6d5-f3e627946526" />
+
+## frontend-app
+<img width="1432" height="794" alt="Screenshot 2026-05-22 at 12 52 23" src="https://github.com/user-attachments/assets/fe864c06-44cf-421a-8908-03ec02d5c540" />
+
+
 ### Design Highlights
 
 * **Separation of Concerns**: API layer handles transport/validation, Service layer enforces workflow, ORM handles persistence.
